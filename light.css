@@ -1,0 +1,67 @@
+@font-face {
+            font-family:font2;
+            src: url(bahnschrift.ttf)
+        }
+            body{
+    			padding:5%;
+    			margin: 1% auto;
+    			max-width:650px;
+    			background:#FAFAFA;
+			}
+			
+			p{
+                font-family:font2;
+			}
+
+			.triCombo{
+			    color:#04B0FD;
+			    font-size:22px
+			}
+			
+			.realTimeFans{
+			    text-align:center;
+			    font-size:20px;
+
+			}
+			
+			.incFans{
+			    
+			    margin:5px 1px 5px 1px;
+			    font-size:18px;
+			}
+			
+			.fansNum{
+			    /*border: 1px solid white; */
+                /*border-radius:14px;*/
+                background:#FAFAFA;
+                /*box-shadow:0px 0px 1px 1px #cccccc;*/
+			}
+			
+			.dataList{
+			    /*border: 1px solid white; */
+                /*border-radius:14px;*/
+                background:#FAFAFA;
+                /*box-shadow:0px 0px 1px 1px #cccccc;*/
+                padding:0% 4%;
+                margin: 1% 0 4% 0; 
+                
+			}
+			.play{
+			    color:#FF4684;
+			    font-size:30px;
+			}
+			.dataCaption{
+			    text-align:center;
+			    margin:-5px 0px 7px 0px;
+			    font-size: 14px;
+			}
+			.headHoriHot{
+			    vertical-align: middle;
+            	font-size: 10px;
+            	background:red;
+            	margin: 0 4px 2px 4px;
+            	color: white;
+            	border-radius: 20px;
+            	padding: 3px 8px;
+            	
+            }
