@@ -1,12 +1,8 @@
 <?php
 
-$auth = $_GET["auth"];
- if($auth=="updatenow"){
+$update = $_GET["update"];
 
-   $servername = "localhost";
-$username = "bilifans";
-$password = "rZKf7tjsiaMfXaLK";
-$dbname = "bilifans";
+require('database.php');
      
     
     $conn = mysqli_connect($servername, $username, $password, $dbname);
@@ -14,28 +10,38 @@ $dbname = "bilifans";
         die("连接失败: " . mysqli_connect_error());
     }
     
-    // $sql = "INSERT INTO FansData (JAM,GKW,BBPCS) VALUES (12, 23, 34)";
-    
     
     $sql = "SELECT * FROM fansdata";
     $result = mysqli_query($conn, $sql);
+    
+    if($update=="daily"){
     while($row = mysqli_fetch_assoc($result)){
-         if (mysqli_query($conn, "UPDATE fansdata SET fans=".get_fans($row["uid"])." WHERE nick='{$row["nick"]}'")==1){
-             echo "更新完成：".$row["nick"];
+         
+         if (mysqli_query($conn, "UPDATE fansdata SET dailyFans=".get_fans($row["uid"])." WHERE nick='{$row["nick"]}'")==1){
+             echo "每日数据更新完成：".$row["nick"];
+             echo "<hr>";
+         }
+    }
+    }
+    
+    
+    if($update=="monthly"){
+    while($row = mysqli_fetch_assoc($result)){
+         
+         if (mysqli_query($conn, "UPDATE fansdata SET monthlyFans=".get_fans($row["uid"])." WHERE nick='{$row["nick"]}'")==1){
+             echo "每月数据更新完成：".$row["nick"];
              echo "<hr>";
          }
     }
     
-    mysqli_close($conn);
     }
     
-else{
-    echo "permission denied";
-}
+    mysqli_close($conn);
 
 
 
-function curl_get_https($url){
+
+function CurlGetData($url){
     $curl = curl_init(); 
     curl_setopt($curl, CURLOPT_URL, $url);
     curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
@@ -46,7 +52,7 @@ function curl_get_https($url){
 }
 
 function get_fans($uid){
-    $contentsFans = curl_get_https('https://api.bilibili.com/x/relation/stat?vmid='.$uid);
+    $contentsFans = CurlGetData('https://api.bilibili.com/x/relation/stat?vmid='.$uid);
     $fansNum = json_decode($contentsFans);
     return $fansNum->data->follower; 
 }

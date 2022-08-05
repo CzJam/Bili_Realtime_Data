@@ -1,6 +1,6 @@
 @font-face {
             font-family:font2;
-            src: url(bahnschrift.ttf)
+            src: url(digit.ttf)
         }
             body{
     			padding:5%;
@@ -29,6 +29,18 @@
 			    margin:5px 1px 5px 1px;
 			    font-size:18px;
 			    color:white;
+			}
+			
+			.incFansNum{
+			    color:#00E676;
+			    font-size:30px;
+			}
+			
+				.realTimeFansNum{
+			    text-align:center;
+			    margin:-12px 1px 0px 1px;
+			    font-size:48px;
+			    color:#04B0FD;
 			}
 			
 			.fansNum{

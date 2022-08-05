@@ -1,6 +1,6 @@
 @font-face {
             font-family:font2;
-            src: url(bahnschrift.ttf)
+            src: url(digit.ttf)
         }
             body{
     			padding:5%;
@@ -24,11 +24,24 @@
 
 			}
 			
+			.realTimeFansNum{
+			    text-align:center;
+			    margin:-12px 1px 0px 1px;
+			    font-size:48px;
+			    color:#04B0FD;
+			}
+			
 			.incFans{
 			    
 			    margin:5px 1px 5px 1px;
 			    font-size:18px;
 			}
+			
+			.incFansNum{
+			    color:#00E676;
+			    font-size:30px;
+			}
+			
 			
 			.fansNum{
 			    /*border: 1px solid white; */
@@ -57,7 +70,8 @@
 			}
 			.headHoriHot{
 			    vertical-align: middle;
-            	font-size: 10px;
+            	font-size: 10px; 
+            	font-weight: bold;
             	background:red;
             	margin: 0 4px 2px 4px;
             	color: white;
