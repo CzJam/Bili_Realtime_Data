@@ -37,7 +37,7 @@ CREATE TABLE `fansdata` (
 
 LOCK TABLES `fansdata` WRITE;
 /*!40000 ALTER TABLE `fansdata` DISABLE KEYS */;
-INSERT INTO `fansdata` VALUES (2,'bishi',1019930,1019930);
+INSERT INTO `fansdata` VALUES (2,'nick',0,0);
 /*!40000 ALTER TABLE `fansdata` ENABLE KEYS */;
 UNLOCK TABLES;
 
