@@ -49,8 +49,8 @@
 4. 复制数据库名、用户名、密码，填写到站点目录中的database.php文件中
 5. 浏览器访问 http://站点地址/?usr=nick 其中nick为刚刚在数据库中填写的up主标识
 6. 在宝塔面板左侧新建计划任务，用于统计涨粉：
-- 每日00:00执行访问url：http://站点地址/updatefans.php?update=daily 
-- 每月00:00执行访问url：http://站点地址/updatefans.php?update=monthly 
+	- 每日00:00执行访问url：http://站点地址/updatefans.php?update=daily 
+	- 每月00:00执行访问url：http://站点地址/updatefans.php?update=monthly 
 6. 至此搭建完成！您可在controller.php中可修改显示的视频数量与自动刷新时间，在index.php中修改主题风格
 ------------
 
