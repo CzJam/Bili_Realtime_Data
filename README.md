@@ -1,6 +1,6 @@
 # Bilibili Up主数据实时统计系统
 [![uDZfi.jpg](https://s1.328888.xyz/2022/08/05/uDZfi.jpg)](https://imgloc.com/i/uDZfi)
-### 本系统可实时统计Up主的视频与粉丝数据
+### 本项目通过B站官方api实时统计Up主的视频与粉丝数据
 
 ### 主要功能
 - 实时粉丝数
