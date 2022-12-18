@@ -1,5 +1,5 @@
 # Bilibili Up主数据实时统计系统
-[![uDZfi.jpg](https://s1.328888.xyz/2022/08/05/uDZfi.jpg)](https://imgloc.com/i/uDZfi)
+[![uDZfi.jpg](https://github.com/CzJam/Bili_Realtime_Data/blob/main/demo.jpg)](https://imgloc.com/i/uDZfi)
 ### 本项目通过B站官方api实时统计Up主的视频与粉丝数据
 
 ### 主要功能
