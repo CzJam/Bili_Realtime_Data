@@ -32,8 +32,11 @@ if ($usr!= null) {
             break;
     }
     
+    //错误码
+    $errorCode='{"code":-509,"message":"请求过于频繁，请稍后再试","ttl":1}';
+    
     // 粉丝数
-    $contentsFans = CurlGetData('https://api.bilibili.com/x/relation/stat?vmid='.$uid);
+    $contentsFans = str_replace($errorCode,'',CurlGetData('https://api.bilibili.com/x/relation/stat?vmid='.$uid));
     $fansNum = json_decode($contentsFans);
     $fans =$fansNum->data->follower; 
     
@@ -46,13 +49,13 @@ if ($usr!= null) {
     
     
     // up主昵称
-    $contentsNick = CurlGetData('https://api.bilibili.com/x/space/acc/info?mid='.$uid);
+    $contentsNick = str_replace($errorCode,'',CurlGetData('https://api.bilibili.com/x/space/acc/info?mid='.$uid));
     $userNick = json_decode($contentsNick);
     $nick =$userNick->data->name; 
     
     
     // 视频列表
-    $contentsNewVideo = CurlGetData('https://api.bilibili.com/x/space/arc/search?mid='.$uid); 
+    $contentsNewVideo = str_replace($errorCode,'',CurlGetData('https://api.bilibili.com/x/space/arc/search?mid='.$uid)); 
     $videoList = json_decode($contentsNewVideo); 
 
     
