@@ -79,3 +79,8 @@
             	padding: 3px 8px;
             	
             }
+		.videoCaption{
+                text-decoration:none;
+                cursor: pointer;
+                color: black;
+            }
