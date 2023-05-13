@@ -53,7 +53,7 @@ require('controller.php');
         <?php for($vlist=0;$vlist<$totalVideo;$vlist++){?>
         <hr>
         <div class="dataList">
-            <p><a ><?php echo $dataHotGate[$vlist] ?></a><a style="vertical-align:middle;"><?php echo $title[$vlist] ?></a></p>
+            <p><?php echo $dataHotGate[$vlist].'<a class="videoCaption" style="vertical-align:middle;" href="https://www.bilibili.com/video/'.$bvid[$vlist].'">'.$title[$vlist].'</a>'?></p>
             <p style="text-align:center;margin:-1% 1%">播放：<a class="play"><?php echo round(floatval($totalPlay[$vlist]/10000),2)."w" ?></a>
             &emsp; 在线：<a style="color:#00E676;font-size:30px"><?php echo "$online[$vlist]" ?></a></p><br>
             
