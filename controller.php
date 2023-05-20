@@ -48,16 +48,11 @@ if ($usr!= null) {
     }
     
     
-    // up主昵称
-    $contentsNick = str_replace($errorCode,'',CurlGetData('https://api.bilibili.com/x/space/acc/info?mid='.$uid));
-    $userNick = json_decode($contentsNick);
-    $nick =$userNick->data->name; 
-    
-    
-    // 视频列表
-    $contentsNewVideo = str_replace($errorCode,'',CurlGetData('https://api.bilibili.com/x/space/arc/search?mid='.$uid)); 
+    // up主昵称 & 视频列表
+    $contentsNewVideo = str_replace($errorCode,'',CurlGetData('https://api.bilibili.com/x/space/wbi/arc/search?mid='.$uid)); 
     $videoList = json_decode($contentsNewVideo); 
-
+    $totalVideoNum =$videoList->data->page->count; 
+    $nick =$videoList->data->list->vlist[0]->author; 
     
     // 获取设定的$totalVideo数量的视频数据
     for ($i=0;$i<$totalVideo;$i++){
